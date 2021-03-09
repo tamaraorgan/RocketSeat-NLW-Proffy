@@ -72,4 +72,27 @@ export const PageTeacherForm = styled.div`
       }
     }
   }
+  @media (min-width: 700px) {
+    max-width: 100vw;
+    margin-bottom: 0;
+
+    main {
+      fieldset {
+        padding: 0 6.4rem;
+      }
+      footer {
+        padding: 4rem 6.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+          justify-content: space-between;
+        }
+        button {
+          width: 20rem;
+          margin-top: 0;
+        }
+      }
+    }
+  }
 `

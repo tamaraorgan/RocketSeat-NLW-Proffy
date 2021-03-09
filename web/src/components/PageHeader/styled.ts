@@ -49,6 +49,7 @@ export const PageHeaderContainer = styled.div`
   }
   @media (min-width: 700px) {
     height: 340px;
+    margin-bottom: 0;
 
     .top-bar-container {
       max-width: 1100px;
@@ -62,6 +63,7 @@ export const PageHeaderContainer = styled.div`
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
+      margin-bottom: 0;
 
       strong {
         max-width: 350px;
