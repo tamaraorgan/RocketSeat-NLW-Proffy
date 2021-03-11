@@ -31,8 +31,29 @@ export const PageTeacherForm = styled.div`
         width: 100%;
         padding-bottom: 1.6rem;
         border-bottom: 1px solid var(--color-line-in-white);
+
+        button {
+          background: none;
+          border: none;
+          color: var(--color-primary);
+          font: 700 1.6rem Archivo;
+          cursor: pointer;
+          transition: color 0.2s;
+
+          :hover {
+            color: var(--color-primary-dark);
+          }
+        }
+
+        + textarea {
+          margin-top: 2.4rem;
+        }
+        + input {
+          margin-top: 2.4rem;
+        }
       }
     }
+
     footer {
       padding: 4rem 2.4rem;
       background: var(--color-box-footer);
@@ -79,6 +100,11 @@ export const PageTeacherForm = styled.div`
     main {
       fieldset {
         padding: 0 6.4rem;
+      }
+      .schedule-item {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        column-gap: 1.6rem;
       }
       footer {
         padding: 4rem 6.4rem;

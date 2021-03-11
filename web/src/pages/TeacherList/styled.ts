@@ -21,6 +21,11 @@ export const PageTeacherList = styled.div`
       column-gap: 16px;
       position: absolute;
       bottom: -28px;
+
+      + input-block,
+      + select-block {
+        margin-top: 0;
+      }
     }
 
     main {

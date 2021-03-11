@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const TextareaForm = styled.div`
+export const SelectForm = styled.div`
   position: relative;
   & {
     margin-top: 1.4rem;
@@ -8,10 +8,9 @@ export const TextareaForm = styled.div`
   label {
     font-size: 1.4rem;
   }
-  textarea {
+  select {
     width: 100%;
-    height: 10rem;
-    min-height: 8rem;
+    height: 5.6rem;
     margin-top: 0.8rem;
     border-radius: 0.8rem;
     background: var(--color-input-background);
@@ -28,13 +27,13 @@ export const TextareaForm = styled.div`
     position: absolute;
     left: 1.6rem;
     right: 1.6rem;
-    bottom: 6px;
+    bottom: 0;
   }
   @media (min-width: 700px) {
     max-width: 100%;
 
-    .textarea-block {
-      + .textarea-block {
+    .select-block {
+      + .select-block {
         margin-top: 0rem;
       }
     }
