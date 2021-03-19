@@ -55,7 +55,7 @@ export const TeacherItemMain = styled.div`
         display: block;
       }
 
-      button {
+      a {
         width: 20rem;
         height: 5.6rem;
         background: var(--color-secundary);
@@ -68,6 +68,7 @@ export const TeacherItemMain = styled.div`
         justify-content: space-evenly;
         align-items: center;
         transition: 0.2s;
+        text-decoration: none;
 
         :hover {
           background: var(--color-secundary-dark);
@@ -91,7 +92,7 @@ export const TeacherItemMain = styled.div`
           display: initial;
           margin-left: 1.6rem;
         }
-        button {
+        a {
           width: 24.5rem;
           font-size: 1.6rem;
           justify-content: center;

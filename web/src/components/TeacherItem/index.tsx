@@ -1,38 +1,53 @@
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
+import api from '../../services/api'
 
 import { TeacherItemMain } from './styled'
 
-const TeacherItem: React.FC = () => {
+export interface Teacher {
+  id: number
+  user_id: number
+  cost: number
+  name: string
+  avatar: string
+  bio: string
+  subject: string
+  whatsapp: string
+}
+interface TeacherItemProps {
+  teacher: Teacher
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+  function createNewConnection() {
+    api.post('connections', {
+      user_id: teacher.id
+    })
+  }
+
   return (
     <TeacherItemMain>
       <article className="teacher-item">
         <header>
-          <img
-            src="https://avatars2.githubusercontent.com/u/68870322?s=460&u=bfae2e6616c1f203e64e6f0e49631cef64589990&v=4"
-            alt="Tamara Organ"
-          />
+          <img src={teacher.avatar} alt={teacher.name} />
           <div>
-            <strong>Tamara Organ</strong>
-            <span>Matemática</span>
+            <strong>{teacher.name}</strong>
+            <span>{teacher.subject}</span>
           </div>
         </header>
-        <p className="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          <br />
-          <br />
-          Labore, blanditiis eius molestiae quos a fuga sapiente quasi. Repellat
-          ut similique ipsam nemo quae suscipit expedita, veritatis laboriosam
-          eligendi. Unde, laborum?
-        </p>
+        <p className="description">{teacher.bio}</p>
         <footer>
           <p>
             Preço/Hora
-            <strong>R$ 120,00</strong>
+            <strong>R$ {teacher.cost}</strong>
           </p>
-          <button type="button">
+          <a
+            href={`https://wa.me/${teacher.whatsapp}`}
+            onClick={createNewConnection}
+            target="_black"
+          >
             <img src={whatsappIcon} alt="whatsapp" />
             Entrar em contato
-          </button>
+          </a>
         </footer>
       </article>
     </TeacherItemMain>
